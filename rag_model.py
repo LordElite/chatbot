@@ -120,7 +120,7 @@ class RAGModel:
         return final_state["answer"]
     
      #method to moderate statements
-    def moderate_response(self, question: str) -> str:
+    def moderate_response(self, question: str) -> bool:
         response =client.moderations.create(
         model="omni-moderation-latest",
         input=question,
